@@ -6,10 +6,6 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;;
 }
-body{
-    width: 100%;
-    height: 100%;
-}
 .c-pad{
     padding-right:30px;
 }
@@ -21,4 +17,11 @@ body{
 
 .tooltip-arrow {
     border-top-color: blue; 
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: url(imgs/s-imgs/1681223212336.jpeg)no-repeat;
+    background-position: center;
+    background-size: cover;
 }
