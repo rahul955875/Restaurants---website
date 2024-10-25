@@ -101,7 +101,8 @@
     position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translate(-50%, 50%) rotate(0deg);
+    --rotate : 0deg;
+    transform: translate(-50%, 50%) rotate(var(--rotate));
     /* background-color: blue; */
     width: 1300px;
     height: 1300px;
