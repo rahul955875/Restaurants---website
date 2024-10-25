@@ -121,3 +121,22 @@
 .images .item img{
     height: 400px;
 }
+#prev, #next{
+    position: absolute;
+    font-size: 100px;
+    left: 250px;
+    top: 50%;
+    border: none;
+    font-family: cursive;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.3;
+    background-color: transparent;
+}
+#next{
+    left: unset;
+    right: 250px;
+}
+#next:hover, #prev:hover{
+    opacity: 1;
+}
