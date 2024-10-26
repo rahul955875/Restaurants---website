@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;;
 }
+
 .c-pad{
     padding-right:30px;
 }
@@ -18,7 +19,7 @@
 .tooltip-arrow {
     border-top-color: blue; 
 }
-
+/* ===================main slider ========================= */
 .slider{
     background-image: linear-gradient(to right, #2b2f3a, #0d0e12);
     height: 100vh;
@@ -37,20 +38,20 @@
 .title h1{
     font-family: "Pacifico", cursive;
     position: absolute;
-    top: 10%;
-    right: 60%;
+    top: 15%;
+    right: 70%;
     text-align: right;
     color: #fff;
-    font-size: 150px;
+    font-size: 120px;
     /* width: 40%; */
     line-height: 1.1;
-    transform: rotate(-5deg);
+    transform: rotate(-7deg);
     text-shadow: 3px 5px 0 #478860;
 }
 .content{
     color: #fff;
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 60%;
     text-align: justify;
     width: 350px;
@@ -58,6 +59,7 @@
 .content .item h1{
     color: #e88735;
     font-size:32px;
+    padding-bottom: 10px;
 }
 .content button{
     margin-top: 30px;
@@ -99,17 +101,18 @@
 }
 .images{
     position: absolute;
-    bottom: 0%;
+    bottom: -3%;
     left: 50%;
     --rotate : 0deg;
     transform: translate(-50%, 50%) rotate(var(--rotate));
     /* background-color: blue; */
-    width: 1300px;
-    height: 1300px;
+    width: 950px;
+    height: 1000px;
     border-radius: 50%;
     transition: 0.5s ease-in-out;
     outline: 3px dashed #fff5;
     outline-offset: -100px;
+    user-select: none;
 }
 .images .item{
     position: absolute;
@@ -120,7 +123,7 @@
     rotate: calc(60deg * var(--i));
 }
 .images .item img{
-    height: 400px;
+    height: 300px;
 }
 #prev, #next{
     position: absolute;
@@ -137,6 +140,7 @@
 #next{
     left: unset;
     right: 250px;
+    /* background-color: red; */
 }
 #next:hover, #prev:hover{
     opacity: 1;
