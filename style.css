@@ -48,6 +48,17 @@
     transform: rotate(-7deg);
     text-shadow: 3px 5px 0 #478860;
 }
+.title h1::before{
+    content: "";
+    background: url(imgs/leaves.png)no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    transform: translate(80%,-60%) rotate(10deg);
+    width: 100px;
+    height: 100px;
+}
 .content{
     color: #fff;
     position: absolute;
