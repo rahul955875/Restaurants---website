@@ -6,7 +6,34 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;;
 }
-
+:root{
+    /* font-famil */
+    --pacifico : "Pacifico", cursive;
+    
+    /* colors */
+    --orange : #e88735;
+    --blackSecondary : #2b2f3a;
+    --mainBlack : #0d0e12;
+    --white : #fff;
+}
+/* ===============navbar================= */
+.logo{
+    font-family: var(--pacifico);
+    /* text-shadow: 0 0 5px white; */
+}
+nav a{
+ color: white !important;
+}
+nav .active{
+    color: skyblue !important;
+}
+nav .dropdown-menu a{
+    color: var(--blackSecondary) !important;
+}
+nav .dropdown-menu a:hover{
+    color: var(--white) !important;
+    background-color: var(--blackSecondary);
+}
 .c-pad{
     padding-right:30px;
 }
