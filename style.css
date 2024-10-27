@@ -85,6 +85,18 @@ nav .dropdown-menu a:hover{
     transform: translate(80%,-60%) rotate(10deg);
     width: 100px;
     height: 100px;
+    animation:moving 5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes moving {
+    0%{
+        transform: translate(-250%,-60%) rotate(60deg)skew(0deg,0deg)
+    }
+    50%{
+        transform: translate(-125%,-40%) rotate(40deg)skew(0deg,0deg)
+    }
+    100%{
+        transform: translate(80%,-60%) rotate(10deg)skew(5deg,0deg)
+    }
 }
 .content{
     color: #fff;
