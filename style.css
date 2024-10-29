@@ -252,3 +252,12 @@ nav .dropdown-menu a:hover{
     color: var(--primaryGreem);
     font-weight:500;
 }
+
+.swiper{
+    /* width: 600px; */
+    /* height: 300px; */
+}
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
