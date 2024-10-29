@@ -258,6 +258,10 @@ nav .dropdown-menu a:hover{
     /* height: 300px; */
 }
 .swiper-slide{
+    width: 250px;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
+}
+.swiper-slide img{
+    width: 100%;
 }
