@@ -18,6 +18,15 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="app.js" defer></script>
     <title>Surati Delights</title>
   </head>
@@ -183,7 +192,7 @@
 
         <div class="images">
           <div class="item" style="--i: 1">
-            <img src="imgs/1 (1).png" alt="dish1"  loading="lazy" />
+            <img src="imgs/1 (1).png" alt="dish1" loading="lazy" />
           </div>
           <div class="item" style="--i: 2">
             <img src="imgs/2 (1).png" alt="dish2" loading="lazy" />
@@ -192,7 +201,7 @@
             <img src="imgs/3 (1).png" alt="dish3" loading="lazy" />
           </div>
           <div class="item" style="--i: 4">
-            <img src="imgs/4 (1).png" alt="dish4"  loading="lazy"/>
+            <img src="imgs/4 (1).png" alt="dish4" loading="lazy" />
           </div>
           <div class="item" style="--i: 5">
             <img src="imgs/5 (1).png" alt="dish5" loading="lazy" />
@@ -210,7 +219,8 @@
         <div class="left-img">
           <img
             src="imgs/vecteezy_soya-chunks-palak-curry-also-known-as-spinach-soyabean_16282548-removebg.png"
-            alt="soya img" loading="lazy"
+            alt="soya img"
+            loading="lazy"
           />
         </div>
         <div class="right-content">
@@ -240,7 +250,8 @@
               <img
                 src="imgs/s-imgs/vecteezy_chole-bhature-is-a-north-indian-food-dish-a-combination-of_15933726.jpg"
                 class="card-img-top"
-                alt="Chole" loading="lazy"
+                alt="Chole"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Chole Bhature</h5>
@@ -260,7 +271,8 @@
               <img
                 src="imgs/extra food img/Pakoda.avif"
                 class="card-img-top"
-                alt="Dahi Makhani" loading="lazy"
+                alt="Dahi Makhani"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Pakoda</h5>
@@ -280,7 +292,8 @@
               <img
                 src="imgs/s-imgs/vecteezy_paneer-sizzler-is-an-indian-version-with-cottage-cheese_15933666.jpg"
                 class="card-img-top"
-                alt="paneer tikka" loading="lazy"
+                alt="paneer tikka"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Paneer Tikka</h5>
@@ -300,7 +313,8 @@
               <img
                 src="imgs/extra food img/Pizza.avif"
                 class="card-img-top"
-                alt="Pizza" loading="lazy"
+                alt="Pizza"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Pizza</h5>
@@ -320,7 +334,8 @@
               <img
                 src="imgs/extra food img/Dosa.avif"
                 class="card-img-top"
-                alt="Dosa" loading="lazy"
+                alt="Dosa"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Dosa</h5>
@@ -340,7 +355,8 @@
               <img
                 src="imgs/extra food img/Khichdi.avif"
                 class="card-img-top"
-                alt="khichdi" loading="lazy"
+                alt="khichdi"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Khichdi</h5>
@@ -360,7 +376,8 @@
               <img
                 src="imgs/extra food img/Pav Bhaji.avif"
                 class="card-img-top"
-                alt="pavbhaji" loading="lazy"
+                alt="pavbhaji"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Pav Bhaji</h5>
@@ -380,7 +397,8 @@
               <img
                 src="imgs/extra food img/Pure Veg.avif"
                 class="card-img-top"
-                alt="palak panner" loading="lazy"
+                alt="palak panner"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title text-center">Palak Panner</h5>
@@ -388,9 +406,9 @@
                 <div
                   class="counter d-flex justify-content-centerk align-items-center my-4 px-4"
                 >
-                  <button class="btn btn-primary">-</button>
+                  <button class="btn btn-primary decrease">-</button>
                   <div class="quantity flex-grow-1 text-center">1</div>
-                  <button class="btn btn-primary">+</button>
+                  <button class="btn btn-primary increase">+</button>
                 </div>
               </div>
             </div>
@@ -401,14 +419,17 @@
       <div class="swiper-button-prev s-btns"><</div>
       <div class="swiper-button-next s-btns">></div>
 
-
       <!-- ===================== -->
-      
-
     </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script></script>
+    <script>
+      
+      // let quantity = document.querySelectorAll(".quantity")
+      // let incBtn = document.querySelectorAll(".increase")
+      // let decBtn = document.querySelectorAll(".decrease")
+      
+      // decBtn.forEach((incBtn , index) =>{
+      //   console.log(index)
+      // })
+    </script>
   </body>
 </html>
