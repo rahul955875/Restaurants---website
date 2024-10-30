@@ -44,24 +44,21 @@ const autoSlider = setInterval(nextSlide , 3000);
 
 // ========swiper js=======================
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 3,
-      spaceBetween: 30,
-      freeMode: true,
+    slidesPerView: 4,
+      spaceBetween: 10,
+      freeMode: false,
     autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
       },
-      
-    // If we need pagination
+      speed : 600,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
   
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -69,3 +66,16 @@ const swiper = new Swiper('.swiper', {
   
     
   });
+
+  // ========swiper play on click==============
+  const cards = document.querySelectorAll(".swiper-slide")
+
+  // cards.forEach(card =>{
+  //   card.addEventListener("click", ()=>{
+  //     console.log("is stop");
+  //     swiper.autoplay.stop();
+  //   })
+  //   card.addEventListener("mouseleave", ()=>{
+  //     swiper.autoplay.start();
+  //   })
+  // })

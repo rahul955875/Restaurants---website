@@ -204,7 +204,7 @@ nav .dropdown-menu a:hover{
     top: 50%;
     border: none;
     font-family: cursive;
-    color: #fff;
+    color:var(--white);
     font-weight: bold;
     opacity: 0.3;
     background-color: transparent;
@@ -252,16 +252,32 @@ nav .dropdown-menu a:hover{
     color: var(--primaryGreem);
     font-weight:500;
 }
-
-.swiper{
-    /* width: 600px; */
-    /* height: 300px; */
+/* ====================slider menu=================== */
+section.Menu{
+    background-color: #EEEEEE;
+    padding: 50px 0px;
+    position: relative;
+}
+.swiper-wrapper{
+    height: 60vh;
 }
 .swiper-slide{
-    width: 250px;
-    display: flex;
-    justify-content: center;    
+    height: max-content;
 }
-.swiper-slide img{
-    width: 100%;
+.s-btns{
+    transform: translateY(50%);
+    font-size: var(--p100);
+    font-family: cursive;
+    opacity: 0.3;
+    color:var(--orange);
+}
+.s-btns:hover{
+    opacity: 1;
+}
+.s-btns::after{
+    display: none;
+}
+.swiper-slide .card img{  
+    height: 200px;
+    object-fit: cover;
 }
