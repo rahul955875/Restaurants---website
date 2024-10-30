@@ -23,7 +23,7 @@ function show(){
         else{
             content.classList.remove("active")
         }
-    })
+    })  
 }
 function nextSlide(){
     active = active + 1 > countItem -1 ? 0 : active + 1;
@@ -48,7 +48,10 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 4,
       spaceBetween: 10,
-      freeMode: false,
+      freeMode: {
+        enabled: true,
+        sticky: true,
+    },
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -70,12 +73,12 @@ const swiper = new Swiper('.swiper', {
   // ========swiper play on click==============
   const cards = document.querySelectorAll(".swiper-slide")
 
-  // cards.forEach(card =>{
-  //   card.addEventListener("click", ()=>{
-  //     console.log("is stop");
-  //     swiper.autoplay.stop();
-  //   })
-  //   card.addEventListener("mouseleave", ()=>{
-  //     swiper.autoplay.start();
-  //   })
-  // })
+  cards.forEach(card =>{
+    card.addEventListener("click", ()=>{
+      // console.log("is stop");
+      swiper.autoplay.stop();
+    })
+    card.addEventListener("mouseleave", ()=>{
+      swiper.autoplay.start();
+    })
+  })

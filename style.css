@@ -28,11 +28,14 @@
     --p50 : 50px;
     --p60 : 60px;
     --p80 : 80px;
+    --p90 : 90px;
     --p100 : 100px;
+    --p150 : 150px;
     --f14 : 14px;
     --f15 : 15px;
     --f18 : 18px; 
     --f20 : 20px;
+
 
 }
 /* ===============navbar================= */
@@ -255,11 +258,11 @@ nav .dropdown-menu a:hover{
 /* ====================slider menu=================== */
 section.Menu{
     background-color: #EEEEEE;
-    padding: 50px 0px;
+    padding: var(--p50) 0px;
     position: relative;
 }
 .swiper-wrapper{
-    height: 60vh;
+    padding-bottom: var(--p50);
 }
 .swiper-slide{
     height: max-content;
@@ -278,6 +281,8 @@ section.Menu{
     display: none;
 }
 .swiper-slide .card img{  
-    height: 200px;
+    height: 230px;
     object-fit: cover;
+    object-position:top;
+    /* background-color; */
 }
