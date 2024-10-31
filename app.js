@@ -90,7 +90,9 @@ const increase = document.querySelectorAll(".increase");
 let cartCountShow = document.querySelector(".cart-count");
 let cartCount = Number(document.querySelector(".cart-count").textContent);
 // console.log(++cartCount)
-
+decrease.forEach((decBtn) => {
+  decBtn.disabled = true;
+});
 increase.forEach((incBtn, index) => {
   incBtn.addEventListener("click", () => {
     let incQuan = Number(quantity[index].textContent);
@@ -98,6 +100,7 @@ increase.forEach((incBtn, index) => {
     quantity[index].textContent = incQuan;
     cartCount++;
     cartCountShow.textContent = cartCount;
+    decrease[index].disabled = false;
   });
 });
 
@@ -106,17 +109,17 @@ decrease.forEach((decBtn, index) => {
     // console.log(quantity[index].textContent)
     let decQuan = Number(quantity[index].textContent);
     decQuan--;
-    if (decQuan < 0) {
-      quantity[index.textContent] = 0;
-    } else {
-      quantity[index].textContent = decQuan;
-    }
-    
+    // decQuan < 0 ? quantity[index.textContent] = 0 : quantity[index].textContent = decQuan;
+
+    decQuan < 0
+      ? ((quantity[index].textContent = 0), (decBtn.disabled = true))
+      : ((quantity[index].textContent = decQuan), (decBtn.disabled = false));
+    cartCount--;
     if (decQuan == 0) {
+      cartCount.textContent = 0;
+    } else {
       cartCountShow.textContent = cartCount;
     }
-      cartCount--;
-      cartCountShow.textContent = 0;
   });
 });
 // ===============================
