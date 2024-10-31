@@ -111,15 +111,13 @@ decrease.forEach((decBtn, index) => {
     decQuan--;
     // decQuan < 0 ? quantity[index.textContent] = 0 : quantity[index].textContent = decQuan;
 
-    decQuan < 0
+    decQuan <= 0
       ? ((quantity[index].textContent = 0), (decBtn.disabled = true))
       : ((quantity[index].textContent = decQuan), (decBtn.disabled = false));
+
     cartCount--;
-    if (decQuan == 0) {
-      cartCount.textContent = 0;
-    } else {
-      cartCountShow.textContent = cartCount;
-    }
+    cartCountShow.textContent = cartCount
+    
   });
 });
 // ===============================
