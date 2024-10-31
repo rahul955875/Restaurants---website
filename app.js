@@ -50,7 +50,7 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   slidesPerView: 4,
   spaceBetween: 10,
-  allowTouchMove : true,
+  allowTouchMove: true,
   freeMode: {
     enabled: true,
     sticky: true,
@@ -84,13 +84,39 @@ cards.forEach((card) => {
   });
 });
 // =================counter cart add =============
-  const quantity = document.querySelectorAll(".quantity");
-  const decrease = document.querySelectorAll(".decrease");
-  const increase = document.querySelectorAll(".increase");
-  let count = 1;
-  increase.forEach((incBtn , index )=>{
-    incBtn.addEventListener("click", ()=>{
-      count++;
-      quantity[index].textContent = count;
-    })
-  })
+const quantity = document.querySelectorAll(".quantity");
+const decrease = document.querySelectorAll(".decrease");
+const increase = document.querySelectorAll(".increase");
+let cartCountShow = document.querySelector(".cart-count");
+let cartCount = Number(document.querySelector(".cart-count").textContent);
+// console.log(++cartCount)
+
+increase.forEach((incBtn, index) => {
+  incBtn.addEventListener("click", () => {
+    let incQuan = Number(quantity[index].textContent);
+    incQuan++;
+    quantity[index].textContent = incQuan;
+    cartCount++;
+    cartCountShow.textContent = cartCount;
+  });
+});
+
+decrease.forEach((decBtn, index) => {
+  decBtn.addEventListener("click", () => {
+    // console.log(quantity[index].textContent)
+    let decQuan = Number(quantity[index].textContent);
+    decQuan--;
+    if (decQuan < 0) {
+      quantity[index.textContent] = 0;
+    } else {
+      quantity[index].textContent = decQuan;
+    }
+    
+    if (decQuan == 0) {
+      cartCountShow.textContent = cartCount;
+    }
+      cartCount--;
+      cartCountShow.textContent = 0;
+  });
+});
+// ===============================

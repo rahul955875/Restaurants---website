@@ -286,3 +286,10 @@ section.Menu{
     object-position:top;
     /* background-color; */
 }
+/* ===================cart============== */
+.cart-icon{
+    /* background-color:transparent; */
+    position: fixed !important;
+    right: 2%;
+    top: 2%;
+}
