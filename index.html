@@ -449,5 +449,40 @@
         </div>
       </div>
     </section>
+    <section class="Book-table">  
+      <div class="booking container py-5">
+        <div class="booking-heading text-center mb-3 text-white">
+          <h2 class="display-3 fw-bold mb-3">Book A Table</h2>
+          <a href="tel:9558756745" class="display-6 text-white">+91 123 4567 890</a>
+        </div>
+        <form action="" class="booking-form p-5">
+          <div class="row">
+          <div class=" mb-3 col-6">
+            <input type="text" class="form-control p-3 rounded-pill" id="floatingInput" placeholder="Enter Your Name"  required>
+          </div>
+          <div class="col-6">
+            <input type="tel" class="form-control p-3 rounded-pill" id="floatingtel" pattern="^[1-9][0-9]{9}$" title="Please enter valid Phone" placeholder="Enter Your Phone" required>
+          </div>
+
+        </div>
+          <div class="row mt-3">
+          <div class="mb-3 col-3">
+            <input type="date" class="form-control p-3 rounded-pill" id="floatingdate" placeholder="" required>
+          </div>
+          <div class="mb-3 col-3">
+            <input type="time" class="form-control p-3 rounded-pill" id="floatingdate" placeholder="" required>
+          </div>
+
+          <div class="col-6">
+            <input type="number" class="form-control p-3 rounded-pill" id="floatingtel" placeholder="Enter Number of Person" pattern="^[1-9]*$" title="Enter Number of Person" min="1" max="30" required>
+          </div>
+        </div>
+        <div class="col-4 mx-auto mt-4">
+          <button type="submit" class="form-control p-3 rounded-pill btn btn btn-outline-light fs-5">Make A Reservation </button>
+        </div>
+        </form>
+      </div>
+    </section>
+    <section class="Exclusive-menu"></section>
   </body>
 </html>

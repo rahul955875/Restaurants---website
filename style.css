@@ -18,6 +18,7 @@
     --white : #fff;
     --primaryblue : #0D6EEB;
     --primaryGreem : #478860;
+    --lightGreen : #74CF66;
 
     /* values */
     --p10 : 10px;
@@ -387,7 +388,18 @@ section.Menu{
     color: rgba(0, 0, 0, 0.571);
 }
 .event-bottom h2{
-    font-size: var(--p60);
+    font-size: var(--p50);
     color: var(--primaryGreem);
     font-weight: bold;
 }
+/* ============booking section=============== */
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.Book-table{
+    background: url(https://www.phocafe.co.uk/wp-content/uploads/2018/07/Bookings-Background.jpg)fixed var(--lightGreen);
+    background-position: left center;
+    background-size: cover;
+}
+
+/* ================Exclusive-menu================= */
