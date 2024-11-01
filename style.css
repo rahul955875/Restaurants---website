@@ -397,9 +397,8 @@ input[type="number"]::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 .Book-table{
-    background: url(https://www.phocafe.co.uk/wp-content/uploads/2018/07/Bookings-Background.jpg)fixed var(--lightGreen);
+    background: url(imgs/Bookings-Background.webp)fixed var(--lightGreen);
     background-position: left center;
     background-size: cover;
 }
-
 /* ================Exclusive-menu================= */
