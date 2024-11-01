@@ -25,6 +25,7 @@
     --p25 : 25px;
     --p30 : 30px;
     --p40 : 40px;
+    --p45 : 45px;
     --p50 : 50px;
     --p60 : 60px;
     --p80 : 80px;
@@ -293,4 +294,100 @@ section.Menu{
     position: fixed !important;
     right: 2%;
     top: 2%;
+}
+/* ====================event section =============== */
+.event{
+    padding: 50px 100px;
+}
+.event-heading h3{
+    font-size: var(--p45);
+    text-transform: uppercase;
+    color: var(--primaryGreem);
+    letter-spacing: -2px;
+}
+.event-heading h2{
+    font-size: var(--p100);
+    color: var(--primaryGreem);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height:0.4;
+    letter-spacing:5px;
+}
+.event-middle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.arrow{
+    position: relative;
+    z-index: 11;
+    transform: translateX(53%);
+}
+.event-middle h3{
+    display: inline-block;
+    text-transform: capitalize;
+    
+}
+.arrow-body{
+    width: 120px;
+    vertical-align: middle;
+    display:inline-block;
+    border: 2px solid var(--primaryGreem);
+}
+.arrow-face{
+    vertical-align: middle;
+    font-size: 50px;
+    font-weight:400;
+    display: inline-block;
+    transform: translate(-80%,0%);
+    color: var(--primaryGreem);
+}
+.circle-btn{
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--primaryGreem);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    transform: translate(50%,0%);
+    background-color: rgba(255, 255, 255, 0.342);
+}
+.circle-btn::after, .circle-btn::before{
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    box-shadow: 0 0 5px var(--mainBlack);
+    background-color: var(--white);
+    border: 2px solid var(--primaryGreem);
+}
+.circle-btn::before{
+    width:40px;
+    height:40px;
+    z-index: 2;
+    border: 2px solid var(--primaryGreem);
+    background-color: var(--white);
+
+}
+.event-middle img{
+  border: 5px solid var(--primaryGreem);
+    position: relative;
+    width: 50%;
+    border-radius:200px;
+}
+.event-bottom {
+    margin-top: var(--p50);
+    text-align: center;
+}
+.event-bottom h3{
+    color: rgba(0, 0, 0, 0.571);
+}
+.event-bottom h2{
+    font-size: var(--p60);
+    color: var(--primaryGreem);
+    font-weight: bold;
 }
