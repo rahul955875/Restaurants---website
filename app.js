@@ -125,6 +125,12 @@ decrease.forEach((decBtn, index) => {
 let swiper1 = new Swiper(".mySwiper1", {
   effect: "cards",
   grabCursor: true,
+  speed: 500,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
 });
 
 
