@@ -120,4 +120,11 @@ decrease.forEach((decBtn, index) => {
     
   });
 });
-// ===============================
+// ================= feedback cards ==================
+
+let swiper1 = new Swiper(".mySwiper1", {
+  effect: "cards",
+  grabCursor: true,
+});
+
+
