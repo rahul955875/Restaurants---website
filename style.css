@@ -473,6 +473,7 @@ section.Feedback{
     text-align: center;
     padding: 30px 20px;
     border-radius: var(--p20);
+    color: var(--white);
 }
 .feedback .swiper-slide img{
     width: 100px;
@@ -481,31 +482,32 @@ section.Feedback{
     border: 3px solid var(--white);
     object-fit: cover;
 }
-.feedback .swiper-slide:nth-child(1n) {
-    background-color: rgb(206, 17, 17);
+.feedback .swiper-slide:nth-child(1) {
+    backdrop-filter: blur(10px);
+    background-color: rgb(206, 17, 17,0.5);
   }
 
- .feedback  .swiper-slide:nth-child(2n) {
+ .feedback  .swiper-slide:nth-child(2) {
     background-color: rgb(0, 140, 255);
   }
 
- .feedback  .swiper-slide:nth-child(3n) {
+ .feedback  .swiper-slide:nth-child(3) {
     background-color: rgb(10, 184, 111);
   }
 
-  .feedback .swiper-slide:nth-child(4n) {
+  .feedback .swiper-slide:nth-child(4) {
     background-color: rgb(211, 122, 7);
   }
 
- .feedback  .swiper-slide:nth-child(5n) {
+ .feedback  .swiper-slide:nth-child(5) {
     background-color: rgb(118, 163, 12);
   }
 
- .feedback  .swiper-slide:nth-child(6n) {
+ .feedback  .swiper-slide:nth-child(6) {
     background-color: rgb(180, 10, 47);
   }
 
- .feedback  .swiper-slide:nth-child(7n) {
+ .feedback  .swiper-slide:nth-child(7) {
     background-color: rgb(35, 99, 19);
   }
 .testimonials-flex{
@@ -519,4 +521,8 @@ section.Feedback{
     font-size: var(--p100);
     line-height: 1;
     margin-top: var(--p30);
+}
+/* ==================footer=========================== */
+fieldset{
+    border: 2px solid red;
 }
