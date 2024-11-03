@@ -523,6 +523,30 @@ section.Feedback{
     margin-top: var(--p30);
 }
 /* ==================footer=========================== */
-fieldset{
-    border: 2px solid red;
+.footer-content-top{
+    border: 2px solid var(--white);
+    height: 200px;
+    border-top: transparent;
+    position: relative;
+}
+.footer-content-top::before{
+    content: "";
+    position: absolute;
+    width: 35%;
+    top: 0;
+    border: 1px solid var(--white);
+}
+.footer-content-top::after{
+    content: "";
+    position: absolute;
+    width: 35%;
+    top: 0;
+    right: 0;
+    border: 1px solid var(--white);
+}
+.footer-heading h2{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
