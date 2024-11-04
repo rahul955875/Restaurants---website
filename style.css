@@ -523,20 +523,20 @@ section.Feedback{
     margin-top: var(--p30);
 }
 /* ==================footer=========================== */
-.footer-content-top{
+.footer-content{
     border: 2px solid var(--white);
-    height: 200px;
     border-top: transparent;
     position: relative;
 }
-.footer-content-top::before{
+.footer-content::before{
     content: "";
     position: absolute;
     width: 35%;
     top: 0;
+    left: 0;
     border: 1px solid var(--white);
 }
-.footer-content-top::after{
+.footer-content::after{
     content: "";
     position: absolute;
     width: 35%;
@@ -549,4 +549,7 @@ section.Feedback{
     top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.footer-content .f-btn{
+    padding: 10px 60px;
 }
