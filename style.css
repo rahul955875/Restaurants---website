@@ -553,3 +553,7 @@ section.Feedback{
 .footer-content .f-btn{
     padding: 10px 60px;
 }
+.extra-info p{
+ font-size: var(--f14);
+ margin-bottom: 10px !important;
+}
