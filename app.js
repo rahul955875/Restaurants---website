@@ -44,24 +44,23 @@ function prevSlide() {
 }
 prev.addEventListener("click", prevSlide);
 
-const autoSlider = setInterval(nextSlide, 3000);
+const autoSlider = setInterval(nextSlide, 4000);
 
 // ======== swiper js for menu =======================
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
   slidesPerView: 4,
-  spaceBetween: 10,
-  allowTouchMove: true,
-  freeMode: {
+  allowTouchMove: false,
+  /* freeMode: {
     enabled: true,
     sticky: true,
-  },
+  }, */
   autoplay: {
-    delay: 3000,
+    delay: 4000,
     disableOnInteraction: true,
   },
-  speed: 800,
+  speed: 600,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

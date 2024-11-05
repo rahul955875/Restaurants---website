@@ -285,10 +285,7 @@ section.Menu{
 }
 .Menu .swiper-wrapper{
     padding-bottom: var(--p50);
-}
-.Menu .swiper-slide{
-    height: max-content;
-}
+} 
 .s-btns{
     transform: translateY(50%);
     font-size: var(--p100);
