@@ -1,3 +1,5 @@
+/* tooltip of login */ 
+
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
 );
@@ -5,7 +7,7 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
-// ================slider part==================
+// ================ slider part ==================
 let prev = document.getElementById("prev");
 let next = document.getElementById("next");
 let image = document.querySelector(".images");
@@ -44,7 +46,7 @@ prev.addEventListener("click", prevSlide);
 
 const autoSlider = setInterval(nextSlide, 3000);
 
-// ========swiper js=======================
+// ======== swiper js for menu =======================
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
@@ -71,7 +73,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// ========swiper play on click==============
+// ======== swiper play on click ==============
 const cards = document.querySelectorAll(".swiper-slide");
 
 cards.forEach((card) => {
@@ -83,7 +85,7 @@ cards.forEach((card) => {
     swiper.autoplay.start();
   });
 });
-// =================counter cart add =============
+// ================= counter cart add =============
 const quantity = document.querySelectorAll(".quantity");
 const decrease = document.querySelectorAll(".decrease");
 const increase = document.querySelectorAll(".increase");
