@@ -286,7 +286,7 @@ nav .dropdown-menu a:hover{
     line-height: 0.9;
 }
 .about .right-content p{
-    padding-left: var(--p100);
+    padding-left: var(--p50);
     line-height: 2;
     color: var(--primaryGreem);
     font-weight:500;
@@ -294,6 +294,7 @@ nav .dropdown-menu a:hover{
 /* ====================slider menu=================== */
 section.Menu{
     background-color: #EEEEEE;
+    /* background: url(imgs/s-imgs/bg2.jpg) fixed; */
     padding: var(--p50) 0px;
     position: relative;
 }
@@ -427,9 +428,8 @@ input[type="number"]::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 .Book-table{
-    background: url(imgs/Bookings-Background.webp)fixed var(--lightGreen);
-    background-position: left center;
-    background-size: cover;
+    background: url(imgs/s-imgs/bg2.jpg)fixed var(--lightGreen);
+    
 }
 /* ================Exclusive-menu================= */
 .e-menu-hading h2{
