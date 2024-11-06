@@ -6,7 +6,24 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
-
+// hover effect ================================
+function hoverEff(){ 
+  let navItems = document.querySelectorAll(".nav-item")
+  let forkImg = document.querySelector(".fork-icon img")
+  navItems.forEach((e,index) => {
+    console.log(index)
+    e.addEventListener("mouseenter", ()=>{
+      const translateValue = index > 0 ? 210*index + "%" : "50%"
+      forkImg.style.setProperty("--set", translateValue);
+      forkImg.style.transform = "translate(var(--set),50%) rotate(225deg)"
+      
+    })
+    e.addEventListener("mouseleave", ()=>{
+      forkImg.style.transform = "translate(50%,50%) rotate(45deg)"
+    })
+  });
+}
+hoverEff()
 // ================ slider part ==================
 let prev = document.getElementById("prev");
 let next = document.getElementById("next");
