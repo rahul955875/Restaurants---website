@@ -98,7 +98,7 @@ nav .dropdown-menu a:hover{
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--orange);
+    /* background-color: var(--orange); */
     background: url(imgs/s-imgs/bg2.jpg)no-repeat;
     background-size: cover;
 }
@@ -122,7 +122,7 @@ nav .dropdown-menu a:hover{
     position: absolute;
     bottom: 0;
     right: 0%;
-    /* transform: translate(80%,-60%) rotate(10deg); */
+    transform: translate(80%,-60%) rotate(10deg)skew(5deg,0deg);
     width: 100px;
     height: 100px;
     animation:moving 5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
@@ -276,16 +276,17 @@ nav .dropdown-menu a:hover{
  .about .right-content h3{
     color: var(--primaryGreem);
     font-weight: bold;
+    margin-bottom: var(--p40);
  }
 .about .right-content h2{
     font-size: var(--p80);
     text-transform: capitalize;
     font-weight: bold;
     color: var(--mainBlack);
-    padding: var(--p30) 0;
-    line-height: 0.9;
+    line-height:0.9;
 }
 .about .right-content p{
+    margin-top: var(--p40);
     padding-left: var(--p50);
     line-height: 2;
     color: var(--primaryGreem);

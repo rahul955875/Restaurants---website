@@ -1,3 +1,38 @@
+// Gsap
+function homePage(){
+  let t1 = gsap.timeline()
+t1.from("nav .logo",{
+  opacity:0,
+  y:-100,
+  duration:1,
+})
+t1.from(".nav-item , .nav-item-1",{
+  opacity:0,
+  y:-100,
+  duration:1,
+  stagger : 0.2,
+})
+t1.from(".fork-icon",{
+  x:-800,
+  scale:3,
+  duration:2,
+})
+}
+homePage()
+/* gsap.from(".right-content h2",{
+  opacity:0,
+  y:100,
+  duration:1,
+  stagger:0.5,
+  delay:5,
+}) */
+/* 
+gsap.to(".left-img",{
+  rotate:360,
+  duration:20,
+  yoyo:true,
+  repeat:-1
+}) */
 /* tooltip of login */ 
 
 const tooltipTriggerList = document.querySelectorAll(
@@ -61,8 +96,9 @@ function sliderRound(){
     show();
   }
   prev.addEventListener("click", prevSlide);
-  
-  const autoSlider = setInterval(nextSlide, 4000);
+  setTimeout(() => {
+    const autoSlider = setInterval(nextSlide, 3000);
+  }, 4500);
   
 }
 sliderRound()
@@ -105,42 +141,45 @@ cards.forEach((card) => {
   });
 });
 // ================= counter cart add =============
-const quantity = document.querySelectorAll(".quantity");
-const decrease = document.querySelectorAll(".decrease");
-const increase = document.querySelectorAll(".increase");
-let cartCountShow = document.querySelector(".cart-count");
-let cartCount = Number(document.querySelector(".cart-count").textContent);
-// console.log(++cartCount)
-decrease.forEach((decBtn) => {
-  decBtn.disabled = true;
-});
-increase.forEach((incBtn, index) => {
-  incBtn.addEventListener("click", () => {
-    let incQuan = Number(quantity[index].textContent);
-    incQuan++;
-    quantity[index].textContent = incQuan;
-    cartCount++;
-    cartCountShow.textContent = cartCount;
-    decrease[index].disabled = false;
+function counterCount(){
+  const quantity = document.querySelectorAll(".quantity");
+  const decrease = document.querySelectorAll(".decrease");
+  const increase = document.querySelectorAll(".increase");
+  let cartCountShow = document.querySelector(".cart-count");
+  let cartCount = Number(document.querySelector(".cart-count").textContent);
+  // console.log(++cartCount)
+  decrease.forEach((decBtn) => {
+    decBtn.disabled = true;
   });
-});
-
-decrease.forEach((decBtn, index) => {
-  decBtn.addEventListener("click", () => {
-    // console.log(quantity[index].textContent)
-    let decQuan = Number(quantity[index].textContent);
-    decQuan--;
-    // decQuan < 0 ? quantity[index.textContent] = 0 : quantity[index].textContent = decQuan;
-
-    decQuan <= 0
-      ? ((quantity[index].textContent = 0), (decBtn.disabled = true))
-      : ((quantity[index].textContent = decQuan), (decBtn.disabled = false));
-
-    cartCount--;
-    cartCountShow.textContent = cartCount
-    
+  increase.forEach((incBtn, index) => {
+    incBtn.addEventListener("click", () => {
+      let incQuan = Number(quantity[index].textContent);
+      incQuan++;
+      quantity[index].textContent = incQuan;
+      cartCount++;
+      cartCountShow.textContent = cartCount;
+      decrease[index].disabled = false;
+    });
   });
-});
+  
+  decrease.forEach((decBtn, index) => {
+    decBtn.addEventListener("click", () => {
+      // console.log(quantity[index].textContent)
+      let decQuan = Number(quantity[index].textContent);
+      decQuan--;
+      // decQuan < 0 ? quantity[index.textContent] = 0 : quantity[index].textContent = decQuan;
+  
+      decQuan <= 0
+        ? ((quantity[index].textContent = 0), (decBtn.disabled = true))
+        : ((quantity[index].textContent = decQuan), (decBtn.disabled = false));
+  
+      cartCount--;
+      cartCountShow.textContent = cartCount
+      
+    });
+  });  
+}
+counterCount()
 // ================= feedback cards ==================
 
 let swiper1 = new Swiper(".mySwiper1", {
