@@ -19,22 +19,52 @@ t1.from(".fork-icon",{
 })
 }
 homePage()
-/* gsap.from(".right-content h2",{
-  opacity:0,
-  y:100,
-  duration:1,
-  stagger:0.5,
-  delay:5,
-}) */
-/* 
-gsap.to(".left-img",{
-  rotate:360,
-  duration:20,
-  yoyo:true,
-  repeat:-1
-}) */
-/* tooltip of login */ 
 
+function aboutPage(){
+  gsap.from(".right-content h3,.right-content h2 ,.right-content p",{
+    opacity:0,
+    y:100,
+    x:100,
+    duration:1,
+    stagger:0.5,
+    scrollTrigger:{
+      trigger:".right-content h2",
+      scroller:"body",
+      start:"top 70%",
+    }
+  })
+  
+  gsap.to(".left-img",{
+    rotate:60,
+    // duration:2,
+    // yoyo:true,
+    scrollTrigger:{
+      trigger:".left-img",
+      scroller:"body",
+      start:"top 70%",
+      scrub:true,
+    }
+  })
+  
+}
+aboutPage()
+
+// gsap.from(".Menu .swiper-slide",{
+//   opacity:0,
+//   y:100,
+//   duration:1,
+//   stagger:0.5,
+//   scrollTrigger:{
+//     trigger: ".Menu .swiper",
+//     scroller:"body",
+//     markers:"true",
+//     start:"top 50%",
+    
+//     }
+// })
+
+
+/* tooltip of login */ 
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
 );
@@ -112,10 +142,11 @@ const swiper = new Swiper(".swiper", {
     enabled: true,
     sticky: true,
   }, */
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: true,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: true,
+  // },
+  autoplay:false,
   speed: 600,
   pagination: {
     el: ".swiper-pagination",

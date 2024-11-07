@@ -256,8 +256,9 @@ nav .dropdown-menu a:hover{
 }
 /* =================about us page==================== */
 .about{
-    /* background: url(imgs/s-imgs/bg1.jpg)no-repeat fixed; */
-    background-size: cover;
+    /* height: 100vh; */
+    /* background: url(https://i.pinimg.com/564x/5a/6b/9a/5a6b9a6b06d209135d6eb13d91acefe6.jpg)no-repeat; */
+    /* background-size: cover; */
     display: flex;
     padding: 70px 100px 50px 10px;  
 }
