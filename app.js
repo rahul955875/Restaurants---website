@@ -1,70 +1,81 @@
 // Gsap
-function homePage(){
-  let t1 = gsap.timeline()
-t1.from("nav .logo",{
-  opacity:0,
-  y:-100,
-  duration:1,
-})
-t1.from(".nav-item , .nav-item-1",{
-  opacity:0,
-  y:-100,
-  duration:1,
-  stagger : 0.2,
-})
-t1.from(".fork-icon",{
-  x:-800,
-  scale:3,
-  duration:2,
-})
+function homePage() {
+  let t1 = gsap.timeline();
+  t1.from("nav .logo", {
+    opacity: 0,
+    y: -100,
+    duration: 1,
+  });
+  t1.from(".nav-item , .nav-item-1", {
+    opacity: 0,
+    y: -100,
+    duration: 1,
+    stagger: 0.2,
+  });
+  t1.from(".fork-icon", {
+    x: -800,
+    scale: 3,
+    duration: 2,
+  });
 }
-homePage()
+homePage();
 
-function aboutPage(){
-  gsap.from(".right-content h3,.right-content h2 ,.right-content p",{
-    opacity:0,
-    y:100,
-    x:100,
-    duration:1,
-    stagger:0.5,
-    scrollTrigger:{
-      trigger:".right-content h2",
-      scroller:"body",
-      start:"top 70%",
-    }
-  })
-  
-  gsap.to(".left-img",{
-    rotate:60,
+function aboutPage() {
+  gsap.from(".right-content h3,.right-content h2 ,.right-content p", {
+    opacity: 0,
+    y: 100,
+    x: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".right-content h2",
+      scroller: "body",
+      start: "top 70%",
+    },
+  });
+
+  gsap.to(".left-img", {
+    rotate: 60,
     // duration:2,
     // yoyo:true,
-    scrollTrigger:{
-      trigger:".left-img",
-      scroller:"body",
-      start:"top 70%",
-      scrub:true,
-    }
-  })
-  
+    scrollTrigger: {
+      trigger: ".left-img",
+      scroller: "body",
+      start: "top 70%",
+      scrub: true,
+    },
+  });
 }
-aboutPage()
+aboutPage();
+function menuPage() {
+  gsap.from(".Menu .animate-slide", {
+    opacity: 0,
+    y: 100,
+    duration: 0.8,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".Menu .swiper",
+      scroller: "body",
+      start: "top 40%",
+      once:true,
+    },
+  });
+}
+menuPage();
 
-// gsap.from(".Menu .swiper-slide",{
-//   opacity:0,
-//   y:100,
+// gsap.from(".table-head", {
+//   opacity: 0,
+//   y:300,
 //   duration:1,
-//   stagger:0.5,
-//   scrollTrigger:{
-//     trigger: ".Menu .swiper",
-//     scroller:"body",
-//     markers:"true",
-//     start:"top 50%",
-    
-//     }
-// })
-
-
-/* tooltip of login */ 
+//   stagger:1,
+//   scrollTrigger: {
+//     trigger: ".table-head",
+//     scroller: "body",
+//     markers: true,
+//     start: "top 50%",
+//   },
+// });
+/* tooltip of login */
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
 );
@@ -72,40 +83,39 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 // hover effect ================================
-function hoverEff(){ 
-  let navItems = document.querySelectorAll(".nav-item")
-  let forkImg = document.querySelector(".fork-icon img")
-  navItems.forEach((e,index) => {
-    console.log(index)
-    e.addEventListener("mouseenter", ()=>{
-      const translateValue = index > 0 ? 210*index + "%" : "50%"
+function hoverEff() {
+  let navItems = document.querySelectorAll(".nav-item");
+  let forkImg = document.querySelector(".fork-icon img");
+  navItems.forEach((e, index) => {
+    console.log(index);
+    e.addEventListener("mouseenter", () => {
+      const translateValue = index > 0 ? 210 * index + "%" : "50%";
       forkImg.style.setProperty("--set", translateValue);
-      forkImg.style.transform = "translate(var(--set),50%) rotate(225deg)"
-      
-    })
-    e.addEventListener("mouseleave", ()=>{
-      forkImg.style.transform = "translate(50%,50%) rotate(45deg)"
-    })
+      forkImg.style.transform = "translate(var(--set),50%) rotate(225deg)";
+    });
+    e.addEventListener("mouseleave", () => {
+      forkImg.style.transform = "translate(50%,50%) rotate(45deg)";
+    });
   });
 }
-hoverEff()
+hoverEff();
 // ================ slider part ==================
-function sliderRound(){
+function sliderRound() {
   let prev = document.getElementById("prev");
   let next = document.getElementById("next");
   let image = document.querySelector(".images");
   let items = document.querySelectorAll(".images .item");
   let contents = document.querySelectorAll(".content .item");
-  
+
   let rotate = 0;
   let active = 0;
   let countItem = items.length;
   let rotateAdd = 360 / countItem;
-  
+
   function show() {
     image.style.setProperty("--rotate", rotate + "deg");
     contents.forEach((content, key) => {
-      console.log(content)
+      console.log(content);
       if (key == active) {
         content.classList.add("active");
       } else {
@@ -119,7 +129,7 @@ function sliderRound(){
     show();
   }
   next.addEventListener("click", nextSlide);
-  
+
   function prevSlide() {
     active = active - 1 < 0 ? countItem - 1 : active - 1;
     rotate = rotate - rotateAdd;
@@ -129,9 +139,8 @@ function sliderRound(){
   setTimeout(() => {
     const autoSlider = setInterval(nextSlide, 3000);
   }, 4500);
-  
 }
-sliderRound()
+sliderRound();
 // ======== swiper js for menu =======================
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
@@ -146,7 +155,7 @@ const swiper = new Swiper(".swiper", {
   //   delay: 4000,
   //   disableOnInteraction: true,
   // },
-  autoplay:false,
+  autoplay: false,
   speed: 600,
   pagination: {
     el: ".swiper-pagination",
@@ -172,7 +181,7 @@ cards.forEach((card) => {
   });
 });
 // ================= counter cart add =============
-function counterCount(){
+function counterCount() {
   const quantity = document.querySelectorAll(".quantity");
   const decrease = document.querySelectorAll(".decrease");
   const increase = document.querySelectorAll(".increase");
@@ -192,25 +201,24 @@ function counterCount(){
       decrease[index].disabled = false;
     });
   });
-  
+
   decrease.forEach((decBtn, index) => {
     decBtn.addEventListener("click", () => {
       // console.log(quantity[index].textContent)
       let decQuan = Number(quantity[index].textContent);
       decQuan--;
       // decQuan < 0 ? quantity[index.textContent] = 0 : quantity[index].textContent = decQuan;
-  
+
       decQuan <= 0
         ? ((quantity[index].textContent = 0), (decBtn.disabled = true))
         : ((quantity[index].textContent = decQuan), (decBtn.disabled = false));
-  
+
       cartCount--;
-      cartCountShow.textContent = cartCount
-      
+      cartCountShow.textContent = cartCount;
     });
-  });  
+  });
 }
-counterCount()
+counterCount();
 // ================= feedback cards ==================
 
 let swiper1 = new Swiper(".mySwiper1", {
@@ -221,7 +229,4 @@ let swiper1 = new Swiper(".mySwiper1", {
     delay: 3000,
     disableOnInteraction: false,
   },
-
 });
-
-
