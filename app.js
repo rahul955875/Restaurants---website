@@ -84,9 +84,33 @@ gsap.from(".booking-form .row input, .sub-btn",{
     trigger:".table-head",
     scroller: "body",
     start: "top 40%",
-    markers:true
   }
 })
+
+gsap.from(".e-h2",{
+  opacity:0,
+  y:200,
+  duration:1,
+  scrollTrigger:{
+    trigger:".e-h2",
+    scroller:"body",
+    start:"top 30%",
+  }
+})
+
+gsap.from(".menu-item",{
+  opacity:0,
+  y:100,
+  stagger:0.2,
+  duration:1,
+  scrollTrigger:{
+    trigger:".menu-item",
+    scroller:"body",
+    start:"top 40%",
+    markers:true,
+  }
+})
+
 /* tooltip of login */
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
