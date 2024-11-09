@@ -63,18 +63,18 @@ function menuPage() {
 }
 menuPage();
 
-// gsap.from(".table-head", {
-//   opacity: 0,
-//   y:300,
-//   duration:1,
-//   stagger:1,
-//   scrollTrigger: {
-//     trigger: ".table-head",
-//     scroller: "body",
-//     markers: true,
-//     start: "top 50%",
-//   },
-// });
+gsap.from(".table-head", {
+  opacity: 0,
+  y:100,
+  duration:1,
+  stagger:0.5,
+  scrollTrigger: {
+    trigger: ".table-head",
+    scroller: "body",
+    markers: true,
+    start: "top 40%",
+  },
+});
 /* tooltip of login */
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
