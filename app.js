@@ -71,10 +71,22 @@ gsap.from(".table-head", {
   scrollTrigger: {
     trigger: ".table-head",
     scroller: "body",
-    markers: true,
     start: "top 40%",
   },
 });
+
+gsap.from(".booking-form .row input, .sub-btn",{
+  opacity:0,
+  y:200,
+  duration:1,
+  stagger:0.2,
+  scrollTrigger:{
+    trigger:".table-head",
+    scroller: "body",
+    start: "top 40%",
+    markers:true
+  }
+})
 /* tooltip of login */
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
