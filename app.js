@@ -66,6 +66,7 @@ menuPage();
 gsap.from(".table-head", {
   opacity: 0,
   y:100,
+  color:"red",
   duration:1,
   stagger:0.5,
   scrollTrigger: {
