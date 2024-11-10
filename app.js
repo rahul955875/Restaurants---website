@@ -99,19 +99,17 @@ gsap.from(".e-h2",{
   }
 })
 
-gsap.from(".menu-item",{
+gsap.from(".footer",{
   opacity:0,
   y:100,
-  stagger:0.2,
   duration:1,
   scrollTrigger:{
-    trigger:".menu-item",
+    trigger:".footer",
     scroller:"body",
-    start:"top 40%",
-    markers:true,
+    start:"top 50%",
+    // markers:true
   }
 })
-
 /* tooltip of login */
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
