@@ -114,6 +114,7 @@ gsap.from(".footer",{
 gsap.from(".testimonials h2",{
   opacity:0,
   y:100,
+  x:100,
   duration:1,
   scrollTrigger:{
     trigger:".testimonials h2",
