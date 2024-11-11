@@ -110,6 +110,18 @@ gsap.from(".footer",{
     // markers:true
   }
 })
+
+gsap.from(".testimonials h2",{
+  opacity:0,
+  y:100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".testimonials h2",
+    scroller:"body",
+    start:"top 50%",
+    markers:true,
+  }
+})
 /* tooltip of login */
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
