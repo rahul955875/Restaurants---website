@@ -63,65 +63,77 @@ function menuPage() {
 }
 menuPage();
 
-gsap.from(".table-head", {
-  opacity: 0,
-  y:100,
-  color:"red",
-  duration:1,
-  stagger:0.5,
-  scrollTrigger: {
-    trigger: ".table-head",
-    scroller: "body",
-    start: "top 40%",
-  },
-});
+function tablePage(){
+  gsap.from(".table-head", {
+    opacity: 0,
+    y:100,
+    color:"red",
+    duration:1,
+    stagger:0.5,
+    scrollTrigger: {
+      trigger: ".table-head",
+      scroller: "body",
+      start: "top 40%",
+    },
+  });
+  
+  gsap.from(".booking-form .row input, .sub-btn",{
+    opacity:0,
+    y:200,
+    duration:1,
+    stagger:0.2,
+    scrollTrigger:{
+      trigger:".table-head",
+      scroller: "body",
+      start: "top 40%",
+    }
+  })
+  gsap.from(".e-h2",{
+    opacity:0,
+    y:200,
+    duration:1,
+    scrollTrigger:{
+      trigger:".e-h2",
+      scroller:"body",
+      start:"top 30%",
+    }
+  })
+    
+}
+tablePage()
 
-gsap.from(".booking-form .row input, .sub-btn",{
+function footerPage(){
+  gsap.from(".footer",{
+    opacity:0,
+    y:100,
+    duration:1,
+    scrollTrigger:{
+      trigger:".footer",
+      scroller:"body",
+      start:"top 50%",
+      // markers:true
+    }
+  })
+  
+  gsap.from(".testimonials h2",{
+    opacity:0,
+    y:100,
+    x:100,
+    duration:1,
+    scrollTrigger:{
+      trigger:".testimonials h2",
+      scroller:"body",
+      start:"top 50%",
+      markers:true,
+    }
+  })
+  
+}
+footerPage()
+gsap.to(".circle-btn::after",{
   opacity:0,
-  y:200,
   duration:1,
-  stagger:0.2,
-  scrollTrigger:{
-    trigger:".table-head",
-    scroller: "body",
-    start: "top 40%",
-  }
-})
-
-gsap.from(".e-h2",{
-  opacity:0,
-  y:200,
-  duration:1,
-  scrollTrigger:{
-    trigger:".e-h2",
-    scroller:"body",
-    start:"top 30%",
-  }
-})
-
-gsap.from(".footer",{
-  opacity:0,
-  y:100,
-  duration:1,
-  scrollTrigger:{
-    trigger:".footer",
-    scroller:"body",
-    start:"top 50%",
-    // markers:true
-  }
-})
-
-gsap.from(".testimonials h2",{
-  opacity:0,
-  y:100,
-  x:100,
-  duration:1,
-  scrollTrigger:{
-    trigger:".testimonials h2",
-    scroller:"body",
-    start:"top 50%",
-    markers:true,
-  }
+  repeat:-1,
 })
 /* tooltip of login */
 const tooltipTriggerList = document.querySelectorAll(
