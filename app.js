@@ -137,7 +137,20 @@ function footerPage(){
       start:"top 50%",
     }
   })
- 
+ gsap.from(".footer-nav a, .f-left a, .f-right a",{
+  opacity:0,
+  y:50,
+  duration:1,
+  delay:1,
+  stagger:0.1,
+  scrollTrigger:{
+    trigger:".footer",
+    scroller:"body",
+    start:"top 50%",
+    // markers:true,
+
+  }
+ })
 }
 footerPage()
 
