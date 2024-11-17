@@ -88,14 +88,15 @@ function tablePage(){
       start: "top 40%",
     }
   })
-  gsap.from(".e-h2",{
+  gsap.from(".e-h2 .e-letters",{
     opacity:0,
     y:200,
-    duration:1,
+    duration:0.5,
+    stagger:0.2,
     scrollTrigger:{
-      trigger:".e-h2",
+      trigger:".e-h2 .e-letters",
       scroller:"body",
-      start:"top 30%",
+      start:"top 50%",
     }
   })
     
@@ -103,33 +104,20 @@ function tablePage(){
 tablePage()
 
 function footerPage(){
-   
-  gsap.from(".testimonials h2",{
-    opacity:0,
-    x:200,
-    y:100,
-    duration:1,
-    scrollTrigger:{
-      trigger:".testimonials h2",
-      scroller:"body",
-      start:"top 90%",
-    }
-  })
   gsap.from(".testimonials-flex",{
     opacity:0,
-    x:-200,
     y:200,
     duration:1.5,
     scrollTrigger:{
       trigger:".testimonials-flex",
       scroller:"body",
-      start:"top 60%",
+      start:"top 70%",
     }
   })
   
   gsap.from(".footer",{
     opacity:0,
-    y:100,
+    y:-100,
     duration:1,
     scrollTrigger:{
       trigger:".footer",
