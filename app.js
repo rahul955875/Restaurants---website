@@ -122,7 +122,7 @@ function footerPage(){
     scrollTrigger:{
       trigger:".footer",
       scroller:"body",
-      start:"top 50%",
+      start:"top 30%",
     }
   })
  gsap.from(".footer-nav a, .f-left a, .f-right a",{
