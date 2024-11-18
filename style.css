@@ -301,6 +301,7 @@ section.Menu{
     position: relative;
 }
 .Menu .swiper-wrapper{
+    padding: 0 var(--p20);
     padding-bottom: var(--p50);
 } 
 .s-btns{

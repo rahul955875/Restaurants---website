@@ -92,7 +92,7 @@ function tablePage(){
     opacity:0,
     y:200,
     duration:0.5,
-    stagger:0.2,
+    stagger:0.15,
     scrollTrigger:{
       trigger:".e-h2 .e-letters",
       scroller:"body",
@@ -136,9 +136,9 @@ function footerPage(){
     scroller:"body",
     start:"top 50%",
     // markers:true,
-
   }
  })
+ 
 }
 footerPage()
 
