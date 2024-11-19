@@ -182,7 +182,7 @@ function sliderRound() {
   function show() {
     image.style.setProperty("--rotate", rotate + "deg");
     contents.forEach((content, key) => {
-      console.log(content);
+      // console.log(content);
       if (key == active) {
         content.classList.add("active");
       } else {
