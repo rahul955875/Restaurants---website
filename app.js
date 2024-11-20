@@ -26,7 +26,7 @@ function aboutPage() {
     y: 100,
     x: 100,
     duration: 1,
-    stagger: 0.5,
+    stagger: 0.2,
     scrollTrigger: {
       trigger: ".right-content h2",
       scroller: "body",
@@ -48,6 +48,17 @@ function aboutPage() {
 }
 aboutPage();
 function menuPage() {
+  gsap.from(".menu-heading-text",{
+    opacity:0,
+    duration:1,
+    y:50,
+    stagger:0.15,
+    scrollTrigger:{
+      trigger:".menu-heading-text",
+      scroller:"body",
+      start:"top 70%",
+    }
+  })
   gsap.from(".Menu .animate-slide", {
     opacity: 0,
     y: 100,
@@ -56,8 +67,7 @@ function menuPage() {
     scrollTrigger: {
       trigger: ".Menu .swiper",
       scroller: "body",
-      start: "top 40%",
-      once:true,
+      start: "top 50%",
     },
   });
 }
