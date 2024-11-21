@@ -399,7 +399,7 @@ section.Menu{
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50% ,-50%);
+    transform: translate(-50% ,-50%)scale(var(--before-scale,0));
     box-shadow: 0 0 5px var(--mainBlack);
     background-color: var(--white);
     border: 2px solid var(--primaryGreem);
@@ -408,9 +408,6 @@ section.Menu{
     width:40px;
     height:40px;
     z-index: 2;
-    border: 2px solid var(--primaryGreem);
-    background-color: var(--white);
-
 }
 .event-middle img{
   border: 5px solid var(--primaryGreem);

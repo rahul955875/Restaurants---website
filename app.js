@@ -88,12 +88,6 @@ function EventPage(){
     scale:2,
     duration:0.8,
     stagger:0.15,
-  }).from(".event-middle img",{
-    opacity:0,
-    y:50,
-    scaleX:0.1,
-    borderRadius:"0px",
-    
   })
   .from(".arrow-face, .arrow-body",{
     opacity:0,
@@ -105,8 +99,18 @@ function EventPage(){
   }).from(".arrow h3",{
     opacity:0,
     y:50,
-
+  }).from(".circle-btn",{
+    // opacity:0,
+    scale:0.1,
+    repeat:-1
+  }).to(".circle-btn",{
+    "--before-scale":1,
+    scale:1,
+    repeat:-1,
+    duration:1,
+    yoyo:true,
   })
+  
 }
 EventPage()
 
