@@ -73,6 +73,43 @@ function menuPage() {
 }
 menuPage();
 
+function EventPage(){
+  let t = gsap.timeline({
+    scrollTrigger:{
+      trigger:".event-heading h3",
+      scroller:"body",
+      start:"top 50%",
+      markers:true
+     }
+  })
+  t.from(".event-heading h3, .event-heading h2",{
+    opacity:0,
+    y:100,
+    scale:2,
+    duration:0.8,
+    stagger:0.15,
+  }).from(".event-middle img",{
+    opacity:0,
+    y:50,
+    scaleX:0.1,
+    borderRadius:"0px",
+    
+  })
+  .from(".arrow-face, .arrow-body",{
+    opacity:0,
+    duration:0.5,
+    stagger:0.5,
+    color:"red",
+    x:-400,
+    scale:3,
+  }).from(".arrow h3",{
+    opacity:0,
+    y:50,
+
+  })
+}
+EventPage()
+
 function tablePage(){
   gsap.from(".table-head", {
     opacity: 0,

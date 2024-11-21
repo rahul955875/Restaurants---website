@@ -40,6 +40,9 @@
 
 
 }
+body{
+    overflow-x: hidden;
+}
 /* ===============navbar================= */
 .logo{
     font-family: var(--pacifico);
@@ -334,6 +337,7 @@ section.Menu{
 .event{
     padding: 50px 100px;
 }
+
 .event-heading h3{
     font-size: var(--p45);
     text-transform: uppercase;
