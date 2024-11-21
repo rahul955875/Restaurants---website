@@ -79,7 +79,6 @@ function EventPage(){
       trigger:".event-heading h3",
       scroller:"body",
       start:"top 50%",
-      markers:true
      }
   })
   t.from(".event-heading h3, .event-heading h2",{
